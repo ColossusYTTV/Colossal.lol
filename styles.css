@@ -15,7 +15,7 @@ body {
 
 
 section {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,10 +83,10 @@ section h2 {
 .sponsor p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  text-shadow: 0 0 20px #3fff49;
+  text-shadow: 0 0 20px #cc00ff;
 }
 .sponsor a {
-  color: #3fff49;
+  color: #cc00ff;
 }
 .sponsor a:hover {
   text-decoration: none;
@@ -134,10 +134,10 @@ section h2 {
   text-decoration: none;
 }
 .transparent-bar .download-button {
-  background-color: #3fff49;
+  background-color: #cc00ff;
   padding: 10px 20px;
   border-radius: 5px;
-  color:#000000
+  color:#fff
 }
 .left-links {
   display: flex;
