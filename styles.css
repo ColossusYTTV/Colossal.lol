@@ -14,6 +14,7 @@ body {
 }
 
 
+
 section {
   min-height: 90vh;
   display: flex;
@@ -22,16 +23,17 @@ section {
   align-items: center;
   padding: 2rem;
 }
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-shadow: 0 0 10px #8b008b;
-}
+
 
 
 .hero {
   text-align: center;
   position: relative;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 0 20px #cc00ff;
+  text-align: center;
+  top: 50;
 }
 .hero .version {
   font-size: 1.5rem;
@@ -40,13 +42,6 @@ section h2 {
   position: absolute;
   top: 0;
   right: -2rem;
-}
-.hero {
-  font-size: 2rem;
-  color: #fff;
-  text-shadow: 0 0 20px #cc00ff;
-  text-align: center;
-  top: 50;
 }
 .hero h1 {
   font-size: 6rem;
@@ -65,42 +60,23 @@ section h2 {
   margin-bottom: 2rem;
   text-shadow: 0 0 20px #cc00ff;
 }
-
-
-.sponsor {
-  font-size: 2rem;
+.hero p2 {
+  font-size: 1.5rem;
   color: #fff;
   text-shadow: 0 0 20px #cc00ff;
   text-align: center;
   position: relative;
   top: -5px;
-}
-.sponsor h1 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 20px #cc00ff;
-}
-.sponsor p {
-  font-size: 1.5rem;
   margin-bottom: 2rem;
   text-shadow: 0 0 20px #cc00ff;
 }
-.sponsor a {
+.hero a {
   color: #cc00ff;
 }
-.sponsor a:hover {
+.hero a:hover {
   text-decoration: none;
 }
 
-
-.line {
-  width: 25%;
-  height: 2px;
-  background-color: #31173c; 
-  position: absolute;
-  top: 400px;
-  z-index: -1;
-}
 
 
 .transparent-bar {
