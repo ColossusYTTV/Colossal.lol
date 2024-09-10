@@ -11,9 +11,6 @@
   <link rel="stylesheet" href="css/background.css">
   <link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet">
   <script src="https://cdn.sellix.io/static/js/embed.js"></script> 
-  <script src="scripts.js" defer></script>
-
-  <script src="js/audiovisualizer.js"></script>
 </head>
 <body>
   <!-- Bar -->
@@ -27,7 +24,7 @@
     </div>
   </div>
 
-  <section>
+  <section id="section1">
     <div class="hero">
       <h1>Colossal<span class="version">V2</span></h1>
       <p>"Fake it till you make it."</p>
@@ -35,7 +32,18 @@
     </div>
   </section>
 
-  <section>
+  <section id="section2">
+    <div class="background-images">
+      <div class="image-slider">
+        <img src="images/thumbnail1.jpg" alt="Image 1">
+        <img src="images/thumbnail2.jpg" alt="Image 2">
+        <img src="images/thumbnail6.jpg" alt="Image 6">
+        <img src="images/thumbnail4.jpg" alt="Image 4">
+        <img src="images/thumbnail5.jpg" alt="Image 5">
+        <img src="images/thumbnail3.jpg" alt="Image 3">
+      </div>
+    </div>
+
     <div class="hero">
       <div class="video">
         <video width="640" height="360" controls>
@@ -46,46 +54,44 @@
     </div>
   </section>
 
-  <section>
-    <div class="hero">
-      <div class="row">
-        <div class="box-panel">
-          <h2>Movement</h2>
-          <div class="content">
-            <p>Hit jumps, outrun taggers and wall run like never before, with our original and well made movement mods!</p>
-          </div>
-        </div>
-        <div class="box-panel">
-          <h2>Visual</h2>
-          <div class="content">
-            <p>Become all seeing with our multitude of ESP, amazing visual effects and advanced visual mods!</p>
-          </div>
-        </div>
-        <div class="box-panel">
-          <h2>Player</h2>
-          <div class="content">
-            <p>Become #1 using our TagAll, TagGun and TagAura, Confuse your opponents with our network Desync, then hide your inputs by spoofing your finger movements.</p>
-          </div>
+  <section id="section3">
+    <div class="row">
+      <div class="box-panel">
+        <h2>Movement</h2>
+        <div class="content">
+          <p>Hit jumps, outrun taggers and wall run like never before, with our original and well made movement mods!</p>
         </div>
       </div>
-      <div class="row">
-        <div class="box-panel">
-          <h2>Safety</h2>
-          <div class="content">
-            <p>Never get detected with our amazing AntiReport. Getting comp checked? Enable Panic mode and bypass everything.</p>
-          </div>
+      <div class="box-panel">
+        <h2>Visual</h2>
+        <div class="content">
+          <p>Become all seeing with our multitude of ESP, amazing visual effects and advanced visual mods!</p>
         </div>
-        <div class="box-panel">
-          <h2>Exploit</h2>
-          <div class="content">
-            <p>Destroy comp checks and other modders with our Break Name Tags, Break Mod Checkers. And even Fake Quest Menu!</p>
-          </div>
+      </div>
+      <div class="box-panel">
+        <h2>Player</h2>
+        <div class="content">
+          <p>Become #1 using our TagAll, TagGun and TagAura, Confuse your opponents with our network Desync, then hide your inputs by spoofing your finger movements.</p>
         </div>
-        <div class="box-panel">
-          <h2>Settings</h2>
-          <div class="content">
-            <p>Customize to your liking with our wide variety of settings and config system. Share and download configs in our discord server.</p>
-          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="box-panel">
+        <h2>Safety</h2>
+        <div class="content">
+          <p>Never get detected with our amazing AntiReport. Getting comp checked? Enable Panic mode and bypass everything.</p>
+        </div>
+      </div>
+      <div class="box-panel">
+        <h2>Exploit</h2>
+        <div class="content">
+          <p>Destroy comp checks and other modders with our Break Name Tags, Break Mod Checkers. And even Fake Quest Menu!</p>
+        </div>
+      </div>
+      <div class="box-panel">
+        <h2>Settings</h2>
+        <div class="content">
+          <p>Customize to your liking with our wide variety of settings and config system. Share and download configs in our discord server.</p>
         </div>
       </div>
     </div>
@@ -106,5 +112,15 @@
       <li></li>
     </ul>
   </div>
+
+  <div class="circles-navigation">
+    <div class="circle" data-target="#section1"></div>
+    <div class="circle" data-target="#section2"></div>
+    <div class="circle" data-target="#section3"></div>
+  </div>
+
+  <script src="scripts.js" defer></script>
+  <script src="js/audiovisualizer.js"></script>
+  <script src="js/scrolling.js"></script>
 </body>
 </html>

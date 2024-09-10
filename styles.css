@@ -1,4 +1,3 @@
-/* General Styles */
 @import url('https://fonts.googleapis.com/css2?family=GreycliffCF&display=swap');
 
 * {
@@ -7,20 +6,60 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
 body {
   font-family: 'GreycliffCF', sans-serif;
   background-color: #1a0f1f;
   color: #fff;
   overflow: auto;
+  scroll-snap-type: y mandatory;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 section {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  scroll-snap-type: y mandatory;
+  position: relative;
+  scroll-snap-align: start;
+}
+
+section:target {
+  scroll-snap-align: start;
+}
+
+.circles-navigation {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 6px 0;
+  transition: background 0.3s, width 0.3s, height 0.3s;
+}
+
+.circle.active {
+  background: #fff;
+  width: 20px;
+  height: 20px;
 }
 
 .hero {
@@ -42,7 +81,7 @@ section {
 }
 
 .hero h1, .hero h2, .hero p, .hero p2 {
-  opacity: 0; /* Ensure they start invisible */
+  opacity: 0;
 }
 
 .hero h1 {
@@ -50,7 +89,7 @@ section {
   margin-bottom: 1rem;
   text-shadow: 0 0 20px #cc00ff;
   animation: fadeInUpFast 1s ease-out forwards;
-  animation-delay: 0.2s; /* Delay for effect */
+  animation-delay: 0.2s;
 }
 
 .hero h2 {
@@ -58,7 +97,7 @@ section {
   margin-bottom: 1rem;
   text-shadow: 0 0 20px #cc00ff;
   animation: fadeInUpSlow 1.5s ease-out forwards;
-  animation-delay: 0.8s; /* Delay for effect */
+  animation-delay: 0.8s;
 }
 
 .hero p {
@@ -66,7 +105,7 @@ section {
   margin-bottom: 2rem;
   text-shadow: 0 0 20px #cc00ff;
   animation: fadeInUpSlow 1.5s ease-out forwards;
-  animation-delay: 0.8s; /* Delay for effect */
+  animation-delay: 0.8s;
 }
 
 .hero p2 {
@@ -78,7 +117,7 @@ section {
   top: -5px;
   margin-bottom: 2rem;
   animation: fadeInUpSlow 1.5s ease-out forwards;
-  animation-delay: 0.8s; /* Delay for effect */
+  animation-delay: 0.8s;
 }
 
 .hero a {
@@ -116,14 +155,14 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  height: 50px; /* Adjust height as needed */
-  background-color: rgba(0, 0, 0, 0); /* Clear background */
-  backdrop-filter: blur(10px); /* Blur effect */
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1000; /* Ensure it's above header */
-  padding: 10px 20px; /* Adjust padding */
+  z-index: 1000;
+  padding: 10px 20px;
 }
 
 .transparent-bar a, .transparent-bar button {
@@ -158,12 +197,14 @@ section {
 }
 
 .left-links a {
-  margin-right: 20px; /* Adjust spacing between links if needed */
+  margin-right: 20px;
 }
 
 .video {
   width: 640px;
   height: 360px;
+  position: relative; /* Ensure proper stacking context */
+  z-index: 1; /* Ensure video is above the background images */
 }
 
 .pulse-glow {
@@ -180,22 +221,21 @@ section {
 }
 
 .row {
-  display: flex; /* Check that the rows are displayed correctly */
-  flex-wrap: wrap; /* Ensure boxes wrap to the next line if needed */
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .box-panel {
-  width: calc(33.33% - 20px); /* Ensure boxes fit within the row */
+  width: calc(33.33% - 20px);
   margin: 10px;
   padding: 20px;
   background-color: #27172f;
   border-radius: 10px;
   box-shadow: 0 0 5px #cc00ff;
   transition: transform 0.3s ease-in-out;
-  opacity: 0; /* Ensure boxes start invisible */
+  opacity: 0;
 }
 
-/* New CSS class for fade-in effect */
 .fade-in {
   animation: fadeInUpFast 1.5s ease-out forwards;
 }
@@ -212,13 +252,13 @@ section {
 
 .content {
   margin-top: 20px;
-  flex-grow: 1; /* Add */
+  flex-grow: 1;
 }
 
 .content p {
   font-size: 1rem;
   line-height: 1.4;
-  text-align: center; /* Add */
+  text-align: center;
 }
 
 .banner {
@@ -232,4 +272,48 @@ section {
   height: 50%;
   height: auto;
   display: block;
+}
+
+#section2 {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.background-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.image-slider {
+  display: flex;
+  width: 590%;
+  height: 100%;
+  animation: scrollBackground 50s linear infinite;
+}
+
+.image-slider img {
+  width: 33.33%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+
+@keyframes scrollBackground {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-66.66%);
+  }
+}
+
+.background-images .image-slider {
+  animation: scrollBackground 50s linear infinite;
 }
