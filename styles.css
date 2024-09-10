@@ -6,14 +6,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'GreycliffCF', sans-serif;
   background-color: #1a0f1f;
   color: #fff;
   overflow: auto;
 }
-
-
 
 section {
   min-height: 90vh;
@@ -24,17 +23,15 @@ section {
   padding: 2rem;
 }
 
-
-
 .hero {
   text-align: center;
   position: relative;
   font-size: 2rem;
   color: #fff;
   text-shadow: 0 0 20px #cc00ff;
-  text-align: center;
-  top: 50;
+  top: 50px;
 }
+
 .hero .version {
   font-size: 1.5rem;
   color: #fff;
@@ -43,23 +40,35 @@ section {
   top: 0;
   right: -2rem;
 }
+
+.hero h1, .hero h2, .hero p, .hero p2 {
+  opacity: 0; /* Ensure they start invisible */
+}
+
 .hero h1 {
   font-size: 6rem;
   margin-bottom: 1rem;
   text-shadow: 0 0 20px #cc00ff;
-  position: relative;
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s; /* Delay for effect */
 }
+
 .hero h2 {
   font-size: 4rem;
   margin-bottom: 1rem;
   text-shadow: 0 0 20px #cc00ff;
-  position: relative;
+  animation: fadeInUpSlow 1.5s ease-out forwards;
+  animation-delay: 0.8s; /* Delay for effect */
 }
+
 .hero p {
   font-size: 1.8rem;
   margin-bottom: 2rem;
   text-shadow: 0 0 20px #cc00ff;
+  animation: fadeInUpSlow 1.5s ease-out forwards;
+  animation-delay: 0.8s; /* Delay for effect */
 }
+
 .hero p2 {
   font-size: 1.5rem;
   color: #fff;
@@ -68,16 +77,39 @@ section {
   position: relative;
   top: -5px;
   margin-bottom: 2rem;
-  text-shadow: 0 0 20px #cc00ff;
+  animation: fadeInUpSlow 1.5s ease-out forwards;
+  animation-delay: 0.8s; /* Delay for effect */
 }
+
 .hero a {
   color: #cc00ff;
 }
+
 .hero a:hover {
   text-decoration: none;
 }
 
+@keyframes fadeInUpFast {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+@keyframes fadeInUpSlow {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .transparent-bar {
   position: fixed;
@@ -93,6 +125,7 @@ section {
   z-index: 1000; /* Ensure it's above header */
   padding: 10px 20px; /* Adjust padding */
 }
+
 .transparent-bar a, .transparent-bar button {
   margin: 0 10px;
   color: #ffffff;
@@ -103,35 +136,40 @@ section {
   font-size: 16px;
   transition: opacity 0.3s ease;
 }
+
 .transparent-bar a:hover, .transparent-bar button:hover {
   opacity: 0.8;
 }
+
 .transparent-bar .discord-link {
   text-decoration: none;
 }
+
 .transparent-bar .download-button {
   background-color: #cc00ff;
   padding: 10px 20px;
   border-radius: 5px;
-  color:#fff
+  color: #fff;
 }
+
 .left-links {
   display: flex;
   align-items: center;
 }
+
 .left-links a {
   margin-right: 20px; /* Adjust spacing between links if needed */
 }
-
-
 
 .video {
   width: 640px;
   height: 360px;
 }
+
 .pulse-glow {
   animation: pulse 1s infinite alternate;
 }
+
 @keyframes pulse {
   from {
     box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #cc00ff, 0 0 80px #cc00ff, 0 0 10px #cc00ff;
@@ -141,42 +179,42 @@ section {
   }
 }
 
-
 .row {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  display: flex; /* Check that the rows are displayed correctly */
+  flex-wrap: wrap; /* Ensure boxes wrap to the next line if needed */
 }
+
 .box-panel {
-  position: relative;
-  width: calc(33.33% - 20px);
+  width: calc(33.33% - 20px); /* Ensure boxes fit within the row */
   margin: 10px;
   padding: 20px;
   background-color: #27172f;
   border-radius: 10px;
   box-shadow: 0 0 5px #cc00ff;
   transition: transform 0.3s ease-in-out;
-  display: flex; /* Add */
-  flex-direction: column; /* Add */
-  align-items: center; /* Add */
+  opacity: 0; /* Ensure boxes start invisible */
 }
-.content img {
-  width: 100%; /* Make the image fill its container */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 100%; /* Add */
+
+/* New CSS class for fade-in effect */
+.fade-in {
+  animation: fadeInUpFast 1.5s ease-out forwards;
 }
+
 .box-panel:hover {
   transform: scale(1.05);
 }
+
 .box-panel h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
   text-align: center;
 }
+
 .content {
   margin-top: 20px;
   flex-grow: 1; /* Add */
 }
+
 .content p {
   font-size: 1rem;
   line-height: 1.4;
