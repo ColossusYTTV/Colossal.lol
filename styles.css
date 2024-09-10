@@ -5,11 +5,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
+
+
 
 body {
   font-family: 'GreycliffCF', sans-serif;
@@ -21,7 +22,6 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
-
 section {
   min-height: 100vh;
   display: flex;
@@ -33,10 +33,11 @@ section {
   scroll-snap-align: start;
 }
 
+
+
 section:target {
   scroll-snap-align: start;
 }
-
 .circles-navigation {
   position: fixed;
   top: 50%;
@@ -46,7 +47,6 @@ section:target {
   flex-direction: column;
   align-items: center;
 }
-
 .circle {
   width: 18px;
   height: 18px;
@@ -55,12 +55,13 @@ section:target {
   margin: 6px 0;
   transition: background 0.3s, width 0.3s, height 0.3s;
 }
-
 .circle.active {
   background: #fff;
   width: 20px;
   height: 20px;
 }
+
+
 
 .hero {
   text-align: center;
@@ -70,7 +71,6 @@ section:target {
   text-shadow: 0 0 20px #cc00ff;
   top: 50px;
 }
-
 .hero .version {
   font-size: 1.5rem;
   color: #fff;
@@ -79,11 +79,9 @@ section:target {
   top: 0;
   right: -2rem;
 }
-
 .hero h1, .hero h2, .hero p, .hero p2 {
   opacity: 0;
 }
-
 .hero h1 {
   font-size: 6rem;
   margin-bottom: 1rem;
@@ -91,7 +89,6 @@ section:target {
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
 }
-
 .hero h2 {
   font-size: 4rem;
   margin-bottom: 1rem;
@@ -99,7 +96,6 @@ section:target {
   animation: fadeInUpSlow 1.5s ease-out forwards;
   animation-delay: 0.8s;
 }
-
 .hero p {
   font-size: 1.8rem;
   margin-bottom: 2rem;
@@ -107,7 +103,6 @@ section:target {
   animation: fadeInUpSlow 1.5s ease-out forwards;
   animation-delay: 0.8s;
 }
-
 .hero p2 {
   font-size: 1.5rem;
   color: #fff;
@@ -119,13 +114,32 @@ section:target {
   animation: fadeInUpSlow 1.5s ease-out forwards;
   animation-delay: 0.8s;
 }
-
 .hero a {
   color: #cc00ff;
 }
-
 .hero a:hover {
   text-decoration: none;
+}
+
+
+
+.hero2 h1 {
+  position: relative;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px #cc00ff;
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s;
+  right: -350px;
+}
+.hero2 p {
+  position:absolute;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 20px #cc00ff;
+  animation: fadeInUpSlow 1.5s ease-out forwards;
+  animation-delay: 0.8s;
+  right: -50px;
 }
 
 @keyframes fadeInUpFast {
@@ -138,7 +152,6 @@ section:target {
     transform: translateY(0);
   }
 }
-
 @keyframes fadeInUpSlow {
   from {
     opacity: 0;
@@ -149,6 +162,8 @@ section:target {
     transform: translateY(0);
   }
 }
+
+
 
 .transparent-bar {
   position: fixed;
@@ -164,7 +179,6 @@ section:target {
   z-index: 1000;
   padding: 10px 20px;
 }
-
 .transparent-bar a, .transparent-bar button {
   margin: 0 10px;
   color: #ffffff;
@@ -175,42 +189,38 @@ section:target {
   font-size: 16px;
   transition: opacity 0.3s ease;
 }
-
 .transparent-bar a:hover, .transparent-bar button:hover {
   opacity: 0.8;
 }
-
 .transparent-bar .discord-link {
   text-decoration: none;
 }
-
 .transparent-bar .download-button {
   background-color: #cc00ff;
   padding: 10px 20px;
   border-radius: 5px;
   color: #fff;
 }
-
 .left-links {
   display: flex;
   align-items: center;
 }
-
 .left-links a {
   margin-right: 20px;
 }
 
+
+
 .video {
   width: 640px;
   height: 360px;
-  position: relative; /* Ensure proper stacking context */
-  z-index: 1; /* Ensure video is above the background images */
+  position: relative;
+  left: -400px;
+  z-index: 1;
 }
-
 .pulse-glow {
   animation: pulse 1s infinite alternate;
 }
-
 @keyframes pulse {
   from {
     box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #cc00ff, 0 0 80px #cc00ff, 0 0 10px #cc00ff;
@@ -220,11 +230,12 @@ section:target {
   }
 }
 
+
+
 .row {
   display: flex;
   flex-wrap: wrap;
 }
-
 .box-panel {
   width: calc(33.33% - 20px);
   margin: 10px;
@@ -235,51 +246,34 @@ section:target {
   transition: transform 0.3s ease-in-out;
   opacity: 0;
 }
-
 .fade-in {
   animation: fadeInUpFast 1.5s ease-out forwards;
 }
-
 .box-panel:hover {
   transform: scale(1.05);
 }
-
 .box-panel h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
   text-align: center;
 }
-
 .content {
   margin-top: 20px;
   flex-grow: 1;
 }
-
 .content p {
   font-size: 1rem;
   line-height: 1.4;
   text-align: center;
 }
 
-.banner {
-  width: 100%;
-  height: 50%;
-  overflow: hidden;
-}
 
-.banner img {
-  width: 100%;
-  height: 50%;
-  height: auto;
-  display: block;
-}
 
 #section2 {
   position: relative;
   overflow: hidden;
   height: 100vh;
 }
-
 .background-images {
   position: absolute;
   top: 0;
@@ -289,22 +283,18 @@ section:target {
   z-index: -1;
   overflow: hidden;
 }
-
 .image-slider {
   display: flex;
   width: 590%;
   height: 100%;
   animation: scrollBackground 50s linear infinite;
 }
-
 .image-slider img {
   width: 33.33%;
   height: 100%;
   object-fit: cover;
   opacity: 0.2;
 }
-
-
 @keyframes scrollBackground {
   0% {
     transform: translateX(0);
@@ -313,7 +303,6 @@ section:target {
     transform: translateX(-66.66%);
   }
 }
-
 .background-images .image-slider {
   animation: scrollBackground 50s linear infinite;
 }
