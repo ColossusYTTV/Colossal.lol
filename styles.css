@@ -61,6 +61,8 @@ section:target {
   position: relative;
   left: 250px;
   bottom: 80px;
+  animation: fadeInUpSlow 1.5s ease-out forwards;
+  animation-delay: 0.2s;
 }
 .hero {
   text-align: center;
@@ -79,7 +81,7 @@ section:target {
   top: 0;
   right: -3rem;
 }
-.hero h1, .hero h2, .hero p, .hero p2 {
+.hero h1, .hero h2, .hero p, .hero p2, .hero button, .mios {
   opacity: 0;
 }
 .hero h1 {
@@ -93,14 +95,14 @@ section:target {
   font-size: 4rem;
   margin-bottom: 1rem;
   text-shadow: 0 0 20px #cc00ff;
-  animation: fadeInUpSlow 1.5s ease-out forwards;
+  animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.8s;
 }
 .hero p {
   font-size: 1.8rem;
   margin-bottom: 2rem;
   text-shadow: 0 0 20px #cc00ff;
-  animation: fadeInUpSlow 1.5s ease-out forwards;
+  animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.8s;
 }
 .hero p2 {
@@ -111,7 +113,7 @@ section:target {
   position: relative;
   top: -5px;
   margin-bottom: 2rem;
-  animation: fadeInUpSlow 1.5s ease-out forwards;
+  animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.8s;
 }
 .hero button {
@@ -125,6 +127,8 @@ section:target {
   cursor: pointer;
   font-size: 2rem;
   transition: opacity 0.3s ease;
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.8s;
 }
 .hero button:hover {
   opacity: 0.8;
@@ -143,22 +147,24 @@ section:target {
   font-size: 4.5rem;
   margin-bottom: 1rem;
   text-shadow: 0 0 20px #cc00ff;
-  animation: fadeInUpFast 1s ease-out forwards;
-  animation-delay: 0.2s;
   right: -350px;
   top: 25px;
   opacity: 0;
+
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s;
 }
 .hero2 p {
   position: absolute;
   font-size: 1.25rem;
   margin-bottom: 2rem;
   text-shadow: 0 0 20px #cc00ff;
-  animation: fadeInUpSlow 0.8s ease-out forwards;
-  animation-delay: 0.8s;
   right: 30px;
   top: 250px;
   opacity: 0;
+
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s;
 }
 
 
@@ -171,6 +177,10 @@ section:target {
   position: relative;
   left: -300px;
   z-index: 1;
+
+  opacity: 0;
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s;
 }
 .pulse-glow {
   animation: pulse 1s infinite alternate;
@@ -243,14 +253,9 @@ section:target {
   background-color: #27172f;
   border-radius: 10px;
   box-shadow: 0 0 5px #cc00ff;
-  transition: transform 0.8s ease-in-out;
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s;
   opacity: 0;
-}
-.fade-in {
-  animation: fadeInUpFast 0.8s ease-out forwards;
-}
-.box-panel:hover {
-  transform: scale(1.05);
 }
 .box-panel h2 {
   font-size: 1.5rem;
@@ -284,13 +289,15 @@ section:target {
   background-color: #27172f;
   border-radius: 10px;
   box-shadow: 0 0 5px #cc00ff;
-  transition: transform 0.8s ease-in-out;
-  opacity: 1;
+  opacity: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s;
 }
 .info-box h2 {
   font-size: 1.6rem;
@@ -303,9 +310,6 @@ section:target {
   margin-bottom: 10px;
   text-align: center;
   color: #fff;
-}
-.info-box-container .info-box {
-  animation: fadeInUpFast 0.8s ease-out forwards;
 }
 
 /*-----------------------------*/
