@@ -57,28 +57,33 @@ section:target {
 }
 
 /*-----------------------------*/
-
+.mios {
+  position: relative;
+  left: 250px;
+  bottom: 80px;
+}
 .hero {
   text-align: center;
   position: relative;
   font-size: 2rem;
   color: #fff;
   text-shadow: 0 0 20px #cc00ff;
-  top: 50px;
+  right: 450px;
+  top: 250px;
 }
 .hero .version {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: #fff;
   text-shadow: 0 0 20px #cc00ff;
   position: absolute;
   top: 0;
-  right: -2rem;
+  right: -3rem;
 }
 .hero h1, .hero h2, .hero p, .hero p2 {
   opacity: 0;
 }
 .hero h1 {
-  font-size: 6rem;
+  font-size: 8rem;
   margin-bottom: 1rem;
   text-shadow: 0 0 20px #cc00ff;
   animation: fadeInUpFast 1s ease-out forwards;
@@ -99,7 +104,7 @@ section:target {
   animation-delay: 0.8s;
 }
 .hero p2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #fff;
   text-shadow: 0 0 20px #cc00ff;
   text-align: center;
@@ -108,6 +113,21 @@ section:target {
   margin-bottom: 2rem;
   animation: fadeInUpSlow 1.5s ease-out forwards;
   animation-delay: 0.8s;
+}
+.hero button {
+  margin: 0 10px;
+  color: #ffffff;
+  box-shadow: 0 0 20px #cc00ff;
+  background-color: #cc00ff;
+  padding: 10px 40px;
+  border-radius: 5px;
+  border: #cc00ff;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: opacity 0.3s ease;
+}
+.hero button:hover {
+  opacity: 0.8;
 }
 .hero a {
   color: #cc00ff;
@@ -140,6 +160,8 @@ section:target {
   top: 250px;
   opacity: 0;
 }
+
+
 
 /*-----------------------------*/
 

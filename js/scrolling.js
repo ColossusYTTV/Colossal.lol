@@ -36,22 +36,24 @@ document.addEventListener('DOMContentLoaded', () => {
       const scrollPosition = window.scrollY;
       let closestSection = null;
       let closestDistance = Number.MAX_VALUE;
+      const snapDistance = 1; // Adjust this value to control the snapping distance
   
       sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const distance = Math.abs(scrollPosition - sectionTop);
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          const distance = Math.abs(scrollPosition - (sectionTop + sectionHeight / 2)); // Snap to the center of the section
   
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestSection = section;
-        }
+          if (distance < closestDistance) {
+              closestDistance = distance;
+              closestSection = section;
+          }
       });
   
-      if (closestSection) {
-        closestSection.scrollIntoView({ behavior: 'smooth' });
+      if (closestSection && closestDistance < snapDistance) {
+          closestSection.scrollIntoView({ behavior: 'smooth' });
       }
-    }
+  }
+  
   
     // Attach click event to circles for smooth scrolling
     circles.forEach(circle => {
