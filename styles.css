@@ -147,8 +147,8 @@ section {
   height: 360px;
   position: absolute; /* Keep fixed */
   left: calc(50% - 320px); /* Center it */
-  top: 200px; /* Adjust as needed */
-  left: 40px;
+  top: 300px; /* Adjust as needed */
+  left: 200px;
   opacity: 1; /* Make sure it’s visible */
 }
 
@@ -165,10 +165,10 @@ section {
 .hero2 h1 {
   position: relative;
   font-size: 4.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 14rem;
   text-shadow: 0 0 20px #cc00ff;
-  right: -350px;
-  top: -200px;
+  right: -440px;
+  top: -100px;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
@@ -178,8 +178,8 @@ section {
   font-size: 1.25rem;
   margin-bottom: 2rem;
   text-shadow: 0 0 20px #cc00ff;
-  right: 30px;
-  top: 210px;
+  right: 140px;
+  top: 300px;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
@@ -281,7 +281,7 @@ section {
   gap: 20px;
   position: absolute;
   right: 45px;
-  top: 270px;
+  top: 375px;
   width: calc(50% - 40px);
 }
 .info-box {
