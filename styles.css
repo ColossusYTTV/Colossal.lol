@@ -5,34 +5,50 @@
   padding: 0;
   box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css2?family=GreycliffCF&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
+
 body {
   font-family: 'GreycliffCF', sans-serif;
   background-color: #1a0f1f;
   color: #fff;
-  overflow: auto;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/*-----------------------------*/
+/* Remove fixed size */
+.container {
+  width: 100%; /* Full width */
+  height: auto; /* Auto height */
+}
 
+/* Sections */
 section {
-  min-height: 100vh;
+  min-height: 100vh; /* Full viewport height */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  scroll-snap-align: start;
+  scroll-snap-align: start; /* Snap alignment */
 }
+
+/* Navigation and other styles remain unchanged */
+
+
 section:target {
   scroll-snap-align: start;
 }
+
 .circles-navigation {
   position: fixed;
   top: 50%;
@@ -42,6 +58,7 @@ section:target {
   flex-direction: column;
   align-items: center;
 }
+
 .circle {
   width: 18px;
   height: 18px;
@@ -57,6 +74,7 @@ section:target {
 }
 
 /*-----------------------------*/
+
 .mios {
   position: relative;
   left: 250px;
@@ -73,6 +91,7 @@ section:target {
   right: 450px;
   top: 250px;
 }
+
 .hero .version {
   font-size: 2.5rem;
   color: #fff;
@@ -81,9 +100,11 @@ section:target {
   top: 0;
   right: -3rem;
 }
+
 .hero h1, .hero h2, .hero p, .hero p2, .hero button, .mios {
   opacity: 0;
 }
+
 .hero h1 {
   font-size: 8rem;
   margin-bottom: 1rem;
@@ -140,8 +161,6 @@ section:target {
   text-decoration: none;
 }
 
-
-
 .hero2 h1 {
   position: relative;
   font-size: 4.5rem;
@@ -150,7 +169,6 @@ section:target {
   right: -350px;
   top: 25px;
   opacity: 0;
-
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
 }
@@ -162,12 +180,9 @@ section:target {
   right: 30px;
   top: 250px;
   opacity: 0;
-
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
 }
-
-
 
 /*-----------------------------*/
 
@@ -177,7 +192,6 @@ section:target {
   position: relative;
   left: -300px;
   z-index: 1;
-
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
@@ -185,6 +199,7 @@ section:target {
 .pulse-glow {
   animation: pulse 1s infinite alternate;
 }
+
 @keyframes pulse {
   from {
     box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #cc00ff, 0 0 80px #cc00ff, 0 0 10px #cc00ff;
@@ -271,8 +286,6 @@ section:target {
   line-height: 1.4;
   text-align: center;
 }
-
-
 
 .info-box-container {
   display: flex;
