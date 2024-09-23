@@ -60,6 +60,45 @@ section {
   height: 20px;
 }
 
+/* Shop */
+.heroshop {
+  text-align: center;
+  position: relative;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 0 20px #cc00ff;
+}
+/* Shop boxes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the boxes horizontally */
+}
+
+.box-panelshop {
+  width: calc(50% - 30px); /* Adjust width to 32%, allowing for wider boxes */
+  margin: 10px;
+  padding: 20px;
+  background-color: #27172f;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #cc00ff;
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+/* Media query for smaller screens (tablets, mobile devices) */
+@media (max-width: 1024px) {
+  .box-panelshop {
+    width: calc(48% - 20px); /* Slightly wider boxes, two per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .box-panelshop {
+    width: calc(100% - 20px); /* One box per row on small screens */
+  }
+}
 /* Hero Section */
 .hero {
   text-align: center;
@@ -249,8 +288,8 @@ section {
   flex-wrap: wrap;
 }
 .box-panel {
-  width: calc(33.33% - 20px);
-  margin: 10px;
+  width: calc(33.33% - 30px);
+  margin: 5px;
   padding: 20px;
   background-color: #27172f;
   border-radius: 10px;
@@ -266,7 +305,7 @@ section {
 }
 .content {
   margin-top: 20px;
-  flex-grow: 1;
+  flex-grow: 3;
 }
 .content p {
   font-size: 1rem;
