@@ -76,16 +76,18 @@ section {
 }
 
 .box-panelshop {
-  width: calc(50% - 30px); /* Adjust width to 32%, allowing for wider boxes */
+  width: calc(50% - 30px);
   margin: 10px;
   padding: 20px;
   background-color: #27172f;
   border-radius: 10px;
   box-shadow: 0 0 5px #cc00ff;
-  animation: fadeInUpFast 1s ease-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
 }
+.box-panelshop:hover {
+  transform: scale(1.05); /* Slightly increase the scale on hover */
+}
+
 
 /* Media query for smaller screens (tablets, mobile devices) */
 @media (max-width: 1024px) {
@@ -163,15 +165,20 @@ section {
   background-color: #cc00ff;
   padding: 10px 40px;
   border-radius: 5px;
-  border: #cc00ff;
+  border: none; /* No border */
   cursor: pointer;
   font-size: 2rem;
-  transition: opacity 0.3s ease;
-  animation: fadeInUpFast 1s ease-out forwards;
-  animation-delay: 0.8s;
+  opacity: 1; /* Initial opacity */
+  transition: opacity 0.3s ease; /* Smooth opacity transition */
 }
+
 .hero button:hover {
-  opacity: 0.8;
+  opacity: 0.5; /* Change opacity on hover */
+}
+
+@keyframes fadeInUpSlow {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
 .hero a {
   color: #cc00ff;
@@ -180,24 +187,24 @@ section {
   text-decoration: none;
 }
 
-/* Video Section */
 .video {
   width: 640px;
   height: 360px;
-  position: absolute; /* Keep fixed */
-  left: calc(50% - 320px); /* Center it */
-  top: 300px; /* Adjust as needed */
-  left: 200px;
-  opacity: 1; /* Make sure it’s visible */
+  position: relative;
+  left: calc(50% - 320px);
+  top: -20px;
+  left: 55px;
+  opacity: 1;
 }
 
-/* Other styles and sections */
+
 .mios {
   position: relative;
   left: 250px;
   bottom: 80px;
   animation: fadeInUpSlow 1.5s ease-out forwards;
   animation-delay: 0.2s;
+  opacity: 0;
 }
 
 /* Hero2 */
@@ -206,19 +213,58 @@ section {
   font-size: 4.5rem;
   margin-bottom: 14rem;
   text-shadow: 0 0 20px #cc00ff;
-  right: -440px;
-  top: -100px;
+  left: 730px;
+  top: 300px;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
 }
 .hero2 p {
-  position: absolute;
+  position: relative;
   font-size: 1.25rem;
   margin-bottom: 2rem;
   text-shadow: 0 0 20px #cc00ff;
-  right: 140px;
-  top: 300px;
+  left: 735px;
+  top: 80px;
+  opacity: 0;
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Hero3 */
+.hero3 centered_top_text {
+  position: relative;
+  text-align: center;
+}
+.hero3 h1 {
+  font-size: 4.5rem;
+  margin-bottom: 14rem;
+  text-shadow: 0 0 20px #cc00ff;
+  opacity: 0;
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+.hero3 p {
+  position: absolute; /* Position the span absolutely */
+  top: 130%; /* Center vertically */
+  left: 25%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to truly center */
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 20px #909090;
+  color: #909090;
+  opacity: 0;
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+.hero3 span {
+  position: absolute; /* Position the span absolutely */
+  bottom: 120%; /* Center vertically */
+  left: 43%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to truly center */
+  font-size: 1.25rem;
+  text-shadow: 0 0 20px #ff58e9;
+  color: #ff58e9;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
@@ -318,12 +364,15 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  position: absolute;
+  position: relative;
   right: 45px;
   top: 375px;
   width: calc(50% - 40px);
 }
 .info-box {
+  position: relative;
+  bottom: 655px;
+  left: 800px;
   width: calc(50% - 20px);
   padding: 20px;
   background-color: #27172f;
