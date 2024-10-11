@@ -206,15 +206,23 @@ section {
   animation-delay: 0.2s;
   opacity: 0;
 }
+.starry {
+  position: relative;
+  right: 140px;
+  bottom: 15px;
+  animation: fadeInUpSlow 1.5s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
 
 /* Hero2 */
 .hero2 h1 {
   position: relative;
   font-size: 4.5rem;
   margin-bottom: 14rem;
-  text-shadow: 0 0 20px #cc00ff;
+  text-shadow: 0 0 20px #ffffff;
   left: 730px;
-  top: 300px;
+  top: 400px;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
@@ -223,9 +231,9 @@ section {
   position: relative;
   font-size: 1.25rem;
   margin-bottom: 2rem;
-  text-shadow: 0 0 20px #cc00ff;
+  text-shadow: 0 0 20px #ffffff;
   left: 735px;
-  top: 80px;
+  top: 190px;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
@@ -239,7 +247,7 @@ section {
 .hero3 h1 {
   font-size: 4.5rem;
   margin-bottom: 14rem;
-  text-shadow: 0 0 20px #cc00ff;
+  text-shadow: 0 0 20px #ffffff;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
@@ -251,8 +259,7 @@ section {
   transform: translate(-50%, -50%); /* Adjust to truly center */
   font-size: 1.25rem;
   margin-bottom: 2rem;
-  text-shadow: 0 0 20px #909090;
-  color: #909090;
+  text-shadow: 0 0 20px #ffffff;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
@@ -263,8 +270,8 @@ section {
   left: 43%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Adjust to truly center */
   font-size: 1.25rem;
-  text-shadow: 0 0 20px #ff58e9;
-  color: #ff58e9;
+  text-shadow: 0 0 20px #cc00ff;
+  color: #cc00ff;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
@@ -366,7 +373,7 @@ section {
   gap: 20px;
   position: relative;
   right: 45px;
-  top: 375px;
+  top: 255px;
   width: calc(50% - 40px);
 }
 .info-box {
