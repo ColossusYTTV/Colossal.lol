@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=GreycliffCF&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'GreycliffCF', sans-serif;
+  font-family: 'Poppins', sans-serif; /* Use Poppins */
   background-color: #1a0f1f;
   color: #fff;
   overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -66,7 +66,7 @@ section {
   position: relative;
   font-size: 2rem;
   color: #fff;
-  text-shadow: 0 0 20px #cc00ff;
+  text-shadow: 0 0 20px #ffffff;
 }
 /* Shop boxes */
 .row {
@@ -79,7 +79,7 @@ section {
   width: calc(50% - 30px);
   margin: 10px;
   padding: 20px;
-  background-color: #27172f;
+  background-color: #27172f79;
   border-radius: 10px;
   box-shadow: 0 0 5px #cc00ff;
   transition: transform 0.3s ease; /* Add transition for smooth scaling */
@@ -221,7 +221,7 @@ section {
   font-size: 4.5rem;
   margin-bottom: 14rem;
   text-shadow: 0 0 20px #ffffff;
-  left: 730px;
+  left: 700px;
   top: 400px;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
@@ -229,11 +229,11 @@ section {
 }
 .hero2 p {
   position: relative;
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
   text-shadow: 0 0 20px #ffffff;
-  left: 735px;
-  top: 190px;
+  left: 720px;
+  top: 180px;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
@@ -252,6 +252,14 @@ section {
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
 }
+.hero3 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 14rem;
+  text-shadow: 0 0 20px #ffffff;
+  opacity: 0;
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
 .hero3 p {
   position: absolute; /* Position the span absolutely */
   top: 130%; /* Center vertically */
@@ -259,23 +267,62 @@ section {
   transform: translate(-50%, -50%); /* Adjust to truly center */
   font-size: 1.25rem;
   margin-bottom: 2rem;
+  text-shadow: 0 0 20px #7A7580;
+  color: #7A7580;
+  opacity: 0;
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+.hero3_visual_container {
+  position: relative;
+  text-align: left;
+  padding: 20px;
+  width: 600px;
+  height: 300px;
+  margin: 20px auto;
+  border-radius: 10px;
+  right: 400px;
+  bottom: 100px;
+}
+.hero3_visual_container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 14rem;
   text-shadow: 0 0 20px #ffffff;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
 }
-.hero3 span {
-  position: absolute; /* Position the span absolutely */
-  bottom: 120%; /* Center vertically */
-  left: 43%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust to truly center */
-  font-size: 1.25rem;
-  text-shadow: 0 0 20px #cc00ff;
-  color: #cc00ff;
+.hero3_visual_container p {
+  position: relative;
+  font-size: 1.10rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 20px #7A7580;
+  color: #7A7580;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
+  bottom: 180px;
 }
+.hero3_visual_container ul {
+  position: relative;
+  list-style-type: none; /* Removes the bullet points */
+  font-size: 1.10rem;
+  padding-left: 0; /* Remove padding for ul */
+  margin-bottom: 13px;
+  line-height: 1.625;
+  text-shadow: 0 0 20px #7A7580;
+  color: #7A7580;
+  opacity: 0;
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s;
+  bottom: 180px;
+}
+.hero3_visual_container ul li {
+  background: url("images/styled-ul-check.svg") no-repeat left center; /* Background image for li */
+  padding-left: 46px; /* Space for the image */
+  margin-bottom: 10px; /* Space between items */
+}
+
 
 /* Pulsing glow */
 .pulse-glow {
@@ -344,7 +391,7 @@ section {
   width: calc(33.33% - 30px);
   margin: 5px;
   padding: 20px;
-  background-color: #27172f;
+  background-color: #27172f84;
   border-radius: 10px;
   box-shadow: 0 0 5px #cc00ff;
   animation: fadeInUpFast 1s ease-out forwards;
@@ -382,7 +429,7 @@ section {
   left: 800px;
   width: calc(50% - 20px);
   padding: 20px;
-  background-color: #27172f;
+  background-color: #27172f79;
   border-radius: 10px;
   box-shadow: 0 0 5px #cc00ff;
   opacity: 0;
