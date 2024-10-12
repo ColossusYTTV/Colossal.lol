@@ -66,7 +66,7 @@ section {
   position: relative;
   font-size: 2rem;
   color: #fff;
-  text-shadow: 0 0 20px #ffffff;
+  text-shadow: 0 0 10px #ffffff;
 }
 /* Shop boxes */
 .row {
@@ -214,13 +214,29 @@ section {
   animation-delay: 0.2s;
   opacity: 0;
 }
+.will {
+  position: relative;
+  bottom: 630px;
+  left: 540px;
+  animation: fadeInUpSlow 1.5s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+.menu {
+  position: relative;
+  bottom: 250px;
+  right: 300px;
+  animation: fadeInUpSlow 1.5s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
 
 /* Hero2 */
 .hero2 h1 {
   position: relative;
   font-size: 4.5rem;
   margin-bottom: 14rem;
-  text-shadow: 0 0 20px #ffffff;
+  text-shadow: 0 0 10px #ffffff;
   left: 700px;
   top: 400px;
   opacity: 0;
@@ -231,7 +247,7 @@ section {
   position: relative;
   font-size: 1.1rem;
   margin-bottom: 1rem;
-  text-shadow: 0 0 20px #ffffff;
+  text-shadow: 0 0 10px #ffffff;
   left: 720px;
   top: 180px;
   opacity: 0;
@@ -240,25 +256,25 @@ section {
 }
 
 /* Hero3 */
-.hero3 centered_top_text {
-  position: relative;
-  text-align: center;
-}
+
 .hero3 h1 {
   font-size: 4.5rem;
   margin-bottom: 14rem;
-  text-shadow: 0 0 20px #ffffff;
+  text-shadow: 0 0 10px #ffffff;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
+  position: relative;
+  top: 50px;
 }
 .hero3 h2 {
   font-size: 2.5rem;
   margin-bottom: 14rem;
-  text-shadow: 0 0 20px #ffffff;
+  text-shadow: 0 0 10px #ffffff;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
+  position: relative;
 }
 .hero3 p {
   position: absolute; /* Position the span absolutely */
@@ -267,7 +283,7 @@ section {
   transform: translate(-50%, -50%); /* Adjust to truly center */
   font-size: 1.25rem;
   margin-bottom: 2rem;
-  text-shadow: 0 0 20px #7A7580;
+  text-shadow: 0 0 10px #7A7580;
   color: #7A7580;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
@@ -282,12 +298,12 @@ section {
   margin: 20px auto;
   border-radius: 10px;
   right: 400px;
-  bottom: 100px;
+  bottom: 50px;
 }
 .hero3_visual_container h1 {
   font-size: 2.5rem;
   margin-bottom: 14rem;
-  text-shadow: 0 0 20px #ffffff;
+  text-shadow: 0 0 10px #ffffff;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
   animation-delay: 0.2s;
@@ -296,7 +312,7 @@ section {
   position: relative;
   font-size: 1.10rem;
   margin-bottom: 2rem;
-  text-shadow: 0 0 20px #7A7580;
+  text-shadow: 0 0 10px #7A7580;
   color: #7A7580;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
@@ -308,9 +324,8 @@ section {
   list-style-type: none; /* Removes the bullet points */
   font-size: 1.10rem;
   padding-left: 0; /* Remove padding for ul */
-  margin-bottom: 13px;
   line-height: 1.625;
-  text-shadow: 0 0 20px #7A7580;
+  text-shadow: 0 0 10px #7A7580;
   color: #7A7580;
   opacity: 0;
   animation: fadeInUpFast 1s ease-out forwards;
@@ -318,6 +333,55 @@ section {
   bottom: 180px;
 }
 .hero3_visual_container ul li {
+  background: url("images/styled-ul-check.svg") no-repeat left center; /* Background image for li */
+  padding-left: 46px; /* Space for the image */
+  margin-bottom: 10px; /* Space between items */
+}
+.hero4_visual_container {
+  position: relative;
+  text-align: left;
+  padding: 20px;
+  width: 600px;
+  height: 300px;
+  margin: 20px auto;
+  border-radius: 10px;
+  left: 400px;
+  top: 100px;
+}
+.hero4_visual_container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 14rem;
+  text-shadow: 0 0 10px #ffffff;
+  opacity: 0;
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+.hero4_visual_container p {
+  position: relative;
+  font-size: 1.10rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px #7A7580;
+  color: #7A7580;
+  opacity: 0;
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s;
+  bottom: 180px;
+}
+.hero4_visual_container ul {
+  position: relative;
+  list-style-type: none; /* Removes the bullet points */
+  font-size: 1.10rem;
+  padding-left: 0; /* Remove padding for ul */
+  margin-bottom: 13px;
+  line-height: 1.625;
+  text-shadow: 0 0 10px #7A7580;
+  color: #7A7580;
+  opacity: 0;
+  animation: fadeInUpFast 1s ease-out forwards;
+  animation-delay: 0.2s;
+  bottom: 180px;
+}
+.hero4_visual_container ul li {
   background: url("images/styled-ul-check.svg") no-repeat left center; /* Background image for li */
   padding-left: 46px; /* Space for the image */
   margin-bottom: 10px; /* Space between items */
@@ -388,7 +452,6 @@ section {
   flex-wrap: wrap;
 }
 .box-panel {
-  width: calc(33.33% - 30px);
   margin: 5px;
   padding: 20px;
   background-color: #27172f84;
