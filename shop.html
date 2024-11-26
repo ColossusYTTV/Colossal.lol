@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="COLOSSAL | Fake it till you make it." property="og:title">
+    <meta content="The shop, selling multiple products including CCMV2, Gorilla Tag Accounts and VPNs" property="og:description">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colossal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet">
+    <script src="https://cdn.sellix.io/static/js/embed.js"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Tag styles */
+        .h3 {
+            text-align: left;
+            position: relative;
+            font-size: 2rem;
+            color: #fff;
+            text-shadow: 0 0 20px #cc00ff;
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeInUpFast 1s ease-out forwards;
+        }
+        .h4 {
+            text-align: left;
+            position: relative;
+            color: #fff;
+            text-shadow: 0 0 20px #cc00ff;
+            font-size: 16px;
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeInUpFast 1s ease-out forwards;
+        }
+        .h5 {
+            text-align: left;
+            position: relative;
+            color: #fff;
+            text-shadow: 0 0 20px #cc00ff;
+            font-size: 12px;
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeInUpFast 1s ease-out forwards;
+        }
+
+        /* Heroshop stuff (left side of the page) */
+        .heroshop_container {
+            position: relative;
+            text-align: left;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            height: 600px;
+            width: 1200px;
+            animation: fadeInUpFast 1s ease-out forwards;
+        }
+        .heroshop_container_left {
+            position: relative;
+            text-align: left;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            height: 500px;
+            width: 650px;
+            right: 300px;
+        }
+        .heroshop h1 {
+            text-align: left;
+            position: relative;
+            font-size: 5rem;
+            color: #fff;
+            text-shadow: 0 0 20px #cc00ff;
+            opacity: 0;
+            animation: fadeInUpFast 1s ease-out forwards;
+        }
+        .heroshop p {
+            position: relative;
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px #7A7580;
+            color: #7A7580;
+            opacity: 0;
+            animation: fadeInUpFast 1s ease-out forwards;
+            animation-delay: 0.2s;
+        }
+        .heroshop p2 {
+            position: relative;
+            font-size: 0.8rem;
+            text-shadow: 0 0 10px #7A7580;
+            color: #7A7580;
+            opacity: 0;
+            animation: fadeInUpFast 1s ease-out forwards;
+            animation-delay: 0.2s;
+            bottom: 40px;
+        }
+        .heroshop p3 {
+            left: 38px;
+            text-align: center;
+            position: relative;
+            font-size: 0.8rem;
+            text-shadow: 0 0 10px #7A7580;
+            color: #7A7580;
+            opacity: 0;
+            animation: fadeInUpFast 1s ease-out forwards;
+            animation-delay: 0.2s;
+        }
+        .heroshop button {
+            margin: 0 40px;
+            color: #ffffff;
+            box-shadow: 0 0 20px #cc00ff;
+            background-color: #cc00ff;
+            padding: 10px 30px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 2rem;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        } 
+        .heroshop button:hover {
+            opacity: 0.5;
+        }
+        .heroshop ul {
+            position: relative;
+            list-style-type: none;
+            font-size: 1.10rem;
+            line-height: 1.625;
+            text-shadow: 0 0 10px #7A7580;
+            color: #7A7580;
+            opacity: 0;
+            animation: fadeInUpFast 1s ease-out forwards;
+            animation-delay: 0.2s;
+            top: 40px;
+        }
+        .heroshop_ul_title {
+            text-align: left;
+            position: relative;
+            font-size: 1.30rem;
+            font-weight: 500;
+            color: #fff;
+            text-shadow: 0 0 20px #fff;
+            opacity: 0;
+            animation: fadeInUpFast 1s ease-out forwards;
+        }
+        .heroshop ul li {
+            background: url("images/styled-ul-check.svg") no-repeat left center;
+            padding-left: 46px;
+            margin-bottom: 10px;
+        }
+
+        /* Shop box (Right side of the page) */
+        .shop_box {
+            width: 100%;
+            position: relative;
+            left: 650px;
+            bottom: 475px;
+        }
+        .shop_box .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border: 2px solid rgba(255, 255, 255, 0.06);
+            border-radius: 36px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .shop_box_step {
+            padding-left: 59px;
+            position: relative;
+            margin-bottom: 22px;
+            position: relative;
+        }
+        .shop_box_step:before {
+            content: "";
+            background-color: rgba(255, 255, 255, 0.319);
+            display: block;
+            width: 1px;
+            height: calc(100% - 25px);
+            position: absolute;
+            top: 45px;
+            left: 17px;
+        }
+        .plan_btn_group label {
+            cursor: pointer;
+            padding: 10px 20px;
+            border: 2px solid #cc00ff;
+            border-radius: 25px;
+            margin: 0 5px;
+            font-size: 16px;
+            color: #cc00ff;
+            align-items: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .plan_btn_group input[type="radio"] {
+            display: none;
+        }
+        .plan_btn_group input[type="radio"]:checked + label {
+            background-color: #cc00ff;
+            color: white;
+        }
+
+        /* Other part of shop */
+        .shophero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 14rem;
+            text-shadow: 0 0 10px #ffffff;
+            opacity: 0;
+            animation: fadeInUpFast 1s ease-out forwards;
+            animation-delay: 0.2s;
+            position: relative;
+            top: 50px;
+        }
+        .shophero p3 {
+            left: 45px;
+            bottom: 190px;
+            text-align: center;
+            position: relative;
+            font-size: 0.8rem;
+            text-shadow: 0 0 10px #7A7580;
+            color: #7A7580;
+            opacity: 0;
+            animation: fadeInUpFast 1s ease-out forwards;
+            animation-delay: 0.2s;
+        }
+        .shophero button {
+            margin: 0 40px;
+            color: #ffffff;
+            box-shadow: 0 0 20px #cc00ff;
+            background-color: #cc00ff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        .shophero button:hover {
+            opacity: 0.5;
+        }
+
+        /* Items box */
+        .item-box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            position: relative;
+            left: 140px;
+        }
+        .item-box {
+            position: relative;
+            width: 400px;
+            padding: 20px;
+            background-color: #27172f79;
+            border-radius: 10px;
+            box-shadow: 0 0 5px #cc00ff;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInUpFast 1s ease-out forwards;
+            animation-delay: 0.2s;
+        }
+        .item-box h2 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 5px #fff;
+        }
+        .item-box h3 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 5px #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bar -->
+    <div class="transparent-bar">
+        <div class="left-links">
+        <a href="index.html" class="colossal-link">Colossal</a>
+        </div>
+        <div class="right-buttons">
+        <a href="d.html" target="_blank" class="discord-link">Discord</a>
+        <a href="shop.html" class="download-button">Shop</a>
+        </div>
+    </div>
+
+    <section id="section1">
+        <div class="heroshop_container">
+            <div class="heroshop">
+                <div class="heroshop_container_left">
+                    <h1>Get Started.</h1>
+                    <p>Here’s what we provide for you inside Colossal</p>
+                    <ul>
+                        <li>
+                            <span class="heroshop_ul_title">A Serious Edge</span><br>
+                            Our modules are built to put you two steps ahead of any rival.
+                        </li>
+                        
+                        <li>
+                            <span class="heroshop_ul_title">Unmatched Stealth</span><br>
+                            Configured right, our ghost features keep you off the grid and ahead of any detection.
+                        </li>
+                        <li>
+                            <span class="heroshop_ul_title">Long term cheating</span><br>
+                            Built for your main account - our modules are built safe enough that alts are not required.
+                        </li>
+                    </ul>
+                </div>
+                <div class="shop_box">
+                    <div class="shop_box_step">
+                        <span class="num">1</span>
+                        <h4>Join the discord</h4>                    
+                            
+                        <p>
+                            <span class="h3"><a href="d.html">Colossal.lol/d</a></span> 
+                        </p>     
+                    </div>
+                    <div class="shop_box_step">
+                        <span class="num">2</span>
+                        <h4>Chose a plan</h4>                    
+                            
+                        <p>
+                            <span class="h3">$</span>
+                            <span class="h3 price_vv" id="price">17.99</span>
+                            <span class="h5 od_entry" id="billing-text">/ one-time</span>
+                        </p>
+                        <p2 id="plan_text">Permanent purchase, no subscription</p2>  
+
+                        <div class="plan_btn_group">
+                            <input type="radio" name="plan_v" id="monthly" value="s" checked onclick="updateText()">
+                            <label for="monthly">Monthly</label>
+                            <input type="radio" name="plan_v" id="permanent" value="p" onclick="updateText()">
+                            <label for="permanent">Permanent</label>
+                            <br></br>
+                            <button data-sellix-product="66d6479c09db9" name="continue" id="continue">Continue</button>
+                        </div>
+                        <br></br>
+                        <p3>All prices are as shown in USD</p3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section2">
+        <div class="shophero">
+            <div>
+                <h1>Other Items</h1>
+                <p3>All accounts are legally obtained from public sources</p3>
+            </div>
+        </div>
+        <div class="item-box-container">
+            <div class="item-box">
+                <h2>Gorilla Tag Account</h2>
+                <div class="shophero">
+                    <span><h3>Stock: 3</h3></span>
+                    <button data-sellix-product="HERE">Purchase</button>
+                </div>
+            </div>
+            <div class="item-box">
+                <h2>IPVanish</h2>
+                <div class="shophero">
+                    <span><h3>Stock: 3</h3></span>
+                    <button data-sellix-product="HERE">Purchase</button>
+                </div>
+            </div>
+            <div class="item-box">
+                <h2>Mullvad VPN</h2>
+                <div class="shophero">
+                    <span><h3>Stock: 3</h3></span>
+                    <button data-sellix-product="HERE">Purchase</button>
+                </div>
+            </div>
+            <div class="item-box">
+                <h2>Nord VPN</h2>
+                <div class="shophero">
+                    <span><h3>Stock: 3</h3></span>
+                    <button data-sellix-product="HERE">Purchase</button>
+                </div>
+            </div>
+            <div class="item-box">
+                <h2>Express VPN</h2>
+                <div class="shophero">
+                    <span><h3>Stock: 3</h3></span>
+                    <button data-sellix-product="HERE">Purchase</button>
+                </div>
+            </div>
+            <div class="item-box">
+                <h2>Pure VPN</h2>
+                <div class="shophero">
+                    <span><h3>Stock: 3</h3></span>
+                    <button data-sellix-product="HERE">Purchase</button>
+                </div>
+            </div>
+        </div>   
+    </section>
+
+    <!-- Background -->
+    <div class="backcircles">
+        <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        </ul>
+    </div>
+
+    <script>
+        function updateText() {
+            const isPermanent = !document.getElementById('monthly').checked;
+            document.getElementById('price').textContent = isPermanent ? '17.99' : '4.50';
+            document.getElementById('billing-text').textContent = isPermanent ? '/ one-time' : '/ monthly';
+            document.getElementById('plan_text').textContent = isPermanent ? 'Permanent purchase, no subscription' : 'Billed monthly, cancel anytime';
+
+            const continueButton = document.getElementById('continue');
+            continueButton.setAttribute('data-sellix-product', isPermanent ? '66d6479c09db9' : '66dbaf654f7dd');
+        }
+    
+        updateText();
+    </script>
+</body>
+</html>
