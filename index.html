@@ -141,7 +141,7 @@
     /* Hero 3 */
     .hero3 h1 {
       font-size: 4.5rem;
-      margin-bottom: 14rem;
+      margin-bottom: 10rem;
       text-shadow: 0 0 10px #ffffff;
       opacity: 0;
       animation: fadeInUpFast 1s ease-out forwards;
@@ -335,9 +335,8 @@
       position: relative;
       width: calc(50% - 20px);
       padding: 20px;
-      background-color: #27172f79;
+      background: rgba(43, 19, 56, 0.573);
       border-radius: 10px;
-      box-shadow: 0 0 5px #cc00ff;
       opacity: 0;
       display: flex;
       flex-direction: column;
@@ -361,6 +360,57 @@
       text-shadow: 0 0 5px #fff;
     }
 
+    /* Closer Look Box */
+    .CloserLook-info-box-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      position: relative;
+      left: 140px;
+      width: 1500px;
+    }
+    .CloserLook-info-box {
+      position: relative;
+      height: 200px;
+      width: 400px;
+      padding: 20px;
+      background: rgba(43, 19, 56, 0.573);
+      border-radius: 10px;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: left;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    .CloserLook-info-box h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: left;
+      color: #fff;
+      text-shadow: 0 0 5px #fff;
+    }
+    .CloserLook-info-box h3 {
+      font-size: 0.8rem;
+      margin-bottom: 30px;
+      text-align: left;
+      color: #7A7580;
+      text-shadow: 0 0 5px #7A7580;
+    }
+    .CloserLook-info-box button {
+      margin: 0px;
+      text-align: left;
+      text-shadow: 0 0 5px #cc00ff;
+      color: #cc00ff;
+      background-color: #ffffff00;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
     /* footer thing */
     .footer-box-container {
       display: flex;
@@ -369,8 +419,8 @@
     }
     .footer-box {
       position: relative;
-      width: 900px;
-      height: 280px;
+      width: 1200px;
+      height: 350px;
       padding: 20px;
       background: radial-gradient(circle at 70% 70%, #cc00ff8b 0%, rgba(43, 19, 56, 0.573) 80%);
       border-radius: 30px;
@@ -382,7 +432,8 @@
       animation-delay: 0.2s;
     }
     .footer-box h2 {
-      font-size: 2.4rem;
+      font-weight: bolder;
+      font-size: 3rem;
       margin-bottom: 20px;
       margin-left: 40px;
       text-align: left;
@@ -390,9 +441,10 @@
       text-shadow: 0 0 5px #fff;
     }
     .footer-box h3 {
-      font-size: 0.8rem;
+      font-weight: 300;
+      font-size: 1rem;
       margin-left: 40px;
-      margin-bottom: 40px;
+      margin-bottom: 80px;
       text-align: left;
       color: #fff;
       text-shadow: 0 0 5px #fff;
@@ -451,8 +503,8 @@
     /* Pictures for the monkeys and display */
     .mios {
       position: relative;
-      left: 250px;
-      bottom: 80px;
+      left: 280px;
+      bottom: 130px;
       animation: fadeInUpSlow 1.5s ease-out forwards;
       animation-delay: 0.2s;
       opacity: 0;
@@ -467,15 +519,15 @@
     }
     .will {
       position: relative;
-      bottom: 630px;
-      left: 540px;
+      bottom: 590px;
+      left: 560px;
       animation: fadeInUpSlow 1.5s ease-out forwards;
       animation-delay: 0.2s;
       opacity: 0;
     }
     .menu {
       position: relative;
-      bottom: 520px;
+      bottom: 540px;
       right: 900px;
       animation: fadeInUpSlow 1.5s ease-out forwards;
       animation-delay: 0.2s;
@@ -554,13 +606,11 @@
   
   
     <section id="section3">
-      </div class="centered_top_text"> 
-        <div class="hero3">
-          <h1>
-            Exclusive Features
-            <p>Unique to the CCMV2 experience.</p>
-          </h1>
-        </div>
+      <div class="hero3">
+        <h1>
+          Exclusive Features
+          <p>Unique to the CCMV2 experience.</p>
+        </h1>
       </div>
   
       <div class="hero3_visual_container">
@@ -596,10 +646,52 @@
     </section>
 
     <section id="section5">
+      <div class="hero3">
+        <h1>
+          Take A Closer Look
+          <p>A few more things we have to offer</p>
+        </h1>
+      </div>
+
+      <div class="CloserLook-info-box-container">
+        <div class="CloserLook-info-box">
+            <h2>Anti Screen Share</h2>
+            <h3>Never get caught cheating again, avoid screen share checks. Or record your "legit" gameplay!</h3>
+            <button onclick="window.location.href='shop.html'">Learn More</button>
+        </div>
+        <div class="CloserLook-info-box">
+            <h2>Music Player</h2>
+            <h3>No sound board? No problem. Play songs to yourself or share them with the room.</h3>
+            <button onclick="window.location.href='shop.html'">Learn More</button>
+        </div>
+        <div class="CloserLook-info-box">
+            <h2>The Sight</h2>
+            <h3>See CCMV2 users, identified by their pink nameplate and [CCM] prefix.</h3>
+            <button onclick="window.location.href='shop.html'">Learn More</button>
+        </div>
+        <div class="CloserLook-info-box">
+            <h2>Trusted provider</h2>
+            <h3>We’ve been your leading and most trusted menu provider since 2021.</h3>
+            <button onclick="window.location.href='shop.html'">Learn More</button>
+        </div>
+        <div class="CloserLook-info-box">
+          <h2>Active support</h2>
+          <h3>What ever the issue may be, we’re here to help you solve it.</h3>
+          <button onclick="window.location.href='shop.html'">Learn More</button>
+        </div>
+        <div class="CloserLook-info-box">
+          <h2>Reliability</h2>
+          <h3>Our client is reliable, delivering smooth, consistent performance so you can play confidently.</h3>
+          <button onclick="window.location.href='shop.html'">Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="section6">
       <div class="footer-box-container">
         <div class="footer-box">
             <h2>Fake it till you make it.</h2>
-            <h3>Get an unfair advantage over your opponents, while remaining completely undetected</h3>
+            <h3>Get an unfair advantage over your opponents, while<br/>remaining completely undetected</h3>
             <button onclick="window.location.href='shop.html'">Get Started</button>
         </div>
       </div>   
@@ -635,6 +727,7 @@
     <div class="circle" data-target="#section3"></div>
     <div class="circle" data-target="#section4"></div>
     <div class="circle" data-target="#section5"></div>
+    <div class="circle" data-target="#section6"></div>
   </div>
 
   <script src="scripts.js" defer></script>
