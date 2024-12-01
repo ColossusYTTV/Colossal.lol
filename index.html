@@ -415,7 +415,7 @@
     .footer-box-container {
       display: flex;
       flex-wrap: wrap;
-      position: relative;
+      position: relative;   
     }
     .footer-box {
       position: relative;
@@ -433,7 +433,7 @@
     }
     .footer-box h2 {
       font-weight: bolder;
-      font-size: 3rem;
+      font-size: 2.7rem;
       margin-bottom: 20px;
       margin-left: 40px;
       text-align: left;
@@ -461,12 +461,9 @@
       border-radius: 15px;
       border: none;
       cursor: pointer;
-      font-size: 1rem;
+      font-size: 1.2rem;
       opacity: 1;
       transition: opacity 0.3s ease;
-    }
-    .footer-box button:hover {
-      opacity: 0.5;
     }
 
     /* Background images section */
@@ -529,6 +526,14 @@
       position: relative;
       bottom: 540px;
       right: 900px;
+      animation: fadeInUpSlow 1.5s ease-out forwards;
+      animation-delay: 0.2s;
+      opacity: 0;
+    }
+    .colossus {
+      position: relative;
+      bottom: 380px;
+      left: 400px;
       animation: fadeInUpSlow 1.5s ease-out forwards;
       animation-delay: 0.2s;
       opacity: 0;
@@ -692,9 +697,16 @@
         <div class="footer-box">
             <h2>Fake it till you make it.</h2>
             <h3>Get an unfair advantage over your opponents, while<br/>remaining completely undetected</h3>
-            <button onclick="window.location.href='shop.html'">Get Started</button>
+            <button onclick="window.location.href='shop.html'">
+              Get Started
+              <span>
+                <div class="colossus">
+                  <img src="images/Colossus.png" alt="picture of a monkey" width="880" height="500"/>
+                </div>
+              </span>
+            </button>
         </div>
-      </div>   
+      </div> 
 
       <footer>
         <div class='air air1'></div>
