@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="COLOSSAL | Kill Switch!" property="og:title">
+  <meta content="Climb the ranks to #1 with the most advanced, unique and spicialized Gorilla Tag client." property="og:description">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colossal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/background.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+    }
+
+    /* Animation */
+    @keyframes fadeInUpSlow 
+    {
+      0% { transform: translateY(20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes scrollBackground 
+    {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-66.66%);
+      }
+    }
+
+    /* Hero 3 */
+    .hero3 h1 {
+      font-size: 4.5rem;
+      margin-bottom: 10rem;
+      text-shadow: 0 0 10px #ffffff;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+      position: relative;
+      top: 50px;
+    }
+    .hero3 h2 {
+      font-size: 2.5rem;
+      margin-bottom: 14rem;
+      text-shadow: 0 0 10px #ffffff;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+      position: relative;
+    }
+    .hero3 p {
+      position: absolute;
+      top: 130%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 10px #7A7580;
+      color: #7A7580;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    .hero3_visual_container {
+      position: relative;
+      text-align: left;
+      padding: 20px;
+      width: 600px;
+      height: 300px;
+      margin: 20px auto;
+      border-radius: 10px;
+      right: 280px;
+      bottom: 15px;
+    }
+    .hero3_visual_container h1 {
+      font-size: 3rem;
+      margin-bottom: 14rem;
+      text-shadow: 0 0 10px #fff;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    .hero3_visual_container p {
+      position: relative;
+      font-size: 1.10rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 10px #7A7580;
+      color: #7A7580;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+      bottom: 180px;
+    }
+    .hero3_visual_container ul {
+      position: relative;
+      list-style-type: none;
+      font-size: 1.10rem;
+      padding-left: 0;
+      line-height: 1.625;
+      text-shadow: 0 0 10px #7A7580;
+      color: #7A7580;
+      opacity: 0;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+      bottom: 180px;
+    }
+    .hero3_visual_container ul li {
+      background: url("images/styled-ul-check.svg") no-repeat left center;
+      padding-left: 46px;
+      margin-bottom: 10px;
+    }
+
+    /* footer thing */
+    .footer-box-container {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;   
+    }
+    .footer-box {
+      position: relative;
+      width: 1200px;
+      height: 450px;
+      padding: 20px;
+      background: radial-gradient(circle at 70% 70%, #cc00ff8b 0%, rgba(43, 19, 56, 0.573) 80%);
+      border-radius: 30px;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      animation: fadeInUpFast 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    .footer-box h2 {
+      font-weight: bolder;
+      font-size: 2.7rem;
+      margin-bottom: 20px;
+      margin-left: 40px;
+      text-align: left;
+      color: #fff;
+      text-shadow: 0 0 5px #fff;
+    }
+    .footer-box h3 {
+      font-weight: 300;
+      font-size: 1rem;
+      margin-left: 40px;
+      margin-bottom: 80px;
+      text-align: left;
+      color: #fff;
+      text-shadow: 0 0 5px #fff;
+    }
+    .footer-box button {
+      margin-left: 40px;
+      margin-bottom: 20px;
+      width: 180px;
+      height: 50px;
+      color: #ffffff;
+      box-shadow: 0 0 20px #cc00ff;
+      background-color: #cc00ff;
+      padding: 10px 40px;
+      border-radius: 15px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    .colossus {
+      position: relative;
+      bottom: 440px;
+      left: 400px;
+      animation: fadeInUpSlow 1.5s ease-out forwards;
+      animation-delay: 0.2s;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Bar -->
+  <div class="transparent-bar">
+    <div class="left-links">
+      <a href="index.html" class="colossal-link">Colossal</a>
+    </div>
+    <div class="right-buttons">
+      <a href="d.html" target="_blank" class="discord-link">Discord</a>
+      <a href="shop.html" class="download-button">Shop</a>
+    </div>
+  </div>
+
+  <main class="wrapper">
+    <section id="section1">
+        <div class="footer-box-container">
+            <div class="footer-box">
+                <div class="hero3_visual_container">
+                    <h1>Kill Switch!</h1>
+                    <p>What May Have Caused This?</p>
+                    <ul>
+                      <li>We Identified someone attempting to crack the menu</li>
+                      <li>Menu was patched/insta bans</li>
+                      <li>Some other problem</li>
+                    </ul>
+                </div>
+                <button onclick="window.location.href='d.html'">
+                  Discord
+                  <span>
+                    <div class="colossus">
+                      <img src="images/Colossus.png" alt="picture of a monkey" width="880" height="500"/>
+                    </div>
+                  </span>
+                </button>
+            </div>
+          </div>
+    
+          <footer>
+            <div class='air air1'></div>
+            <div class='air air2'></div>
+            <div class='air air3'></div>
+            <div class='air air4'></div>
+          </footer>
+        </div>
+    </section>
+  </main>
+
+  <!-- Background -->
+  <div class="backcircles">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</body>
+</html>
