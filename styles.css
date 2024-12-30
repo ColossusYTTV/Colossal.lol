@@ -91,6 +91,13 @@ section {
   border-radius: 25px;
   color: #fff;
 }
+.transparent-bar .message {
+  font-size: 42px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+}
 .left-links {
   display: flex;
   align-items: center;
