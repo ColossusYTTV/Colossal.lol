@@ -346,7 +346,10 @@
                             <input type="radio" name="plan_v" id="permanent" value="p" onclick="updateText()">
                             <label for="permanent">Permanent</label>
                             <br></br>
-                            <button data-sellix-product="678ff7b08a0ec" name="continue" id="continue">Continue</button>
+                            <button data-sell-store="55426"
+                            data-sell-theme=""
+                            data-sell-darkmode="true"
+                            name="continue" id="continue">Continue</button>
                         </div>
                         <br></br>
                         <p3>All prices are as shown in USD</p3>
@@ -435,10 +438,20 @@
             document.getElementById('plan_text').textContent = isPermanent ? 'Permanent purchase, no subscription' : 'Billed monthly, cancel anytime';
 
             const continueButton = document.getElementById('continue');
-            continueButton.setAttribute('data-sellix-product', isPermanent ? '678ff7b08a0ec' : '678ff933d6cd2');
+            continueButton.setAttribute('data-sell-product', isPermanent ? '270304' : '270334');
         }
     
         updateText();
     </script>
+
+    <script
+        src="https://cdn.sell.app/embed/script.js"
+        type="module"
+    >
+    </script>
+        <link
+        href="https://cdn.sell.app/embed/style.css"
+        rel="stylesheet"
+    />
 </body>
 </html>
