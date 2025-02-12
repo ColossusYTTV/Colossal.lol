@@ -292,6 +292,7 @@
         <div class="left-links">
         <a href="index.html" class="colossal-link">Colossal</a>
         </div>
+        <div class="message">20% OFF, VANETINES SALE!</div>
         <div class="right-buttons">
         <a href="d.html" target="_blank" class="discord-link">Discord</a>
         <a href="shop.html" class="download-button">Shop</a>
@@ -331,11 +332,11 @@
                     </div>
                     <div class="shop_box_step">
                         <span class="num">2</span>
-                        <h4>Chose a plan</h4>                    
+                        <h4>Chose a plan</h4>                 
                             
                         <p>
                             <span class="h3">$</span>
-                            <span class="h3 price_vv" id="price">17.99</span>
+                            <span class="h3 price_vv" id="price">14.39, 20% Off!</span>
                             <span class="h5 od_entry" id="billing-text">/ one-time</span>
                         </p>
                         <p2 id="plan_text">Permanent purchase, no subscription</p2>  
@@ -433,7 +434,7 @@
     <script>
         function updateText() {
             const isPermanent = !document.getElementById('monthly').checked;
-            document.getElementById('price').textContent = isPermanent ? '17.99' : '4.50';
+            document.getElementById('price').textContent = isPermanent ? '14.39, 20% Off!' : '4.50';
             document.getElementById('billing-text').textContent = isPermanent ? '/ one-time' : '/ monthly';
             document.getElementById('plan_text').textContent = isPermanent ? 'Permanent purchase, no subscription' : 'Billed monthly, cancel anytime';
 
