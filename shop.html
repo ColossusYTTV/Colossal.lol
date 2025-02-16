@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta content="COLOSSAL | Fake it till you make it." property="og:title">
-    <meta content="The shop, selling multiple products including CCMV2, Gorilla Tag Accounts and VPNs" property="og:description">
+    <meta content="The shop, selling products including CCMV2" property="og:description">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -292,7 +292,7 @@
         <div class="left-links">
         <a href="index.html" class="colossal-link">Colossal</a>
         </div>
-        <div class="message">20% OFF, VALENTINES SALE!</div>
+        <!-- <div class="message">20% OFF, VALENTINES SALE!</div> -->
         <div class="right-buttons">
         <a href="d.html" target="_blank" class="discord-link">Discord</a>
         <a href="shop.html" class="download-button">Shop</a>
@@ -336,7 +336,7 @@
                             
                         <p>
                             <span class="h3">$</span>
-                            <span class="h3 price_vv" id="price">14.39, 20% Off!</span>
+                            <span class="h3 price_vv" id="price">19.99</span>
                             <span class="h5 od_entry" id="billing-text">/ one-time</span>
                         </p>
                         <p2 id="plan_text">Permanent purchase, no subscription</p2>  
@@ -434,7 +434,7 @@
     <script>
         function updateText() {
             const isPermanent = !document.getElementById('monthly').checked;
-            document.getElementById('price').textContent = isPermanent ? '14.39, 20% Off!' : '4.50';
+            document.getElementById('price').textContent = isPermanent ? '19.99' : '5.99';
             document.getElementById('billing-text').textContent = isPermanent ? '/ one-time' : '/ monthly';
             document.getElementById('plan_text').textContent = isPermanent ? 'Permanent purchase, no subscription' : 'Billed monthly, cancel anytime';
 
