@@ -545,11 +545,13 @@
   <div class="transparent-bar">
     <div class="left-links">
       <a href="index.html" class="colossal-link">Colossal</a>
+      <a href="#" id="minecraftLink" class="colossal-link">Minecraft</a>
     </div>
-    <!-- <div class="message">20% OFF, VALENTINES SALE!</div> -->
+
     <div class="right-buttons">
+      <a href="partner.html" target="_blank" class="discord-link">Reselling</a>
       <a href="d.html" target="_blank" class="discord-link">Discord</a>
-      <a href="shop.html" class="download-button">Shop</a>
+      <a href="shop.html" class="download-button">Shop</a> 
     </div>
   </div>
 
@@ -746,5 +748,17 @@
   <script src="scripts.js" defer></script>
   <script src="js/audiovisualizer.js"></script>
   <script src="js/scrolling.js"></script>
+
+  <script>
+    document.getElementById('minecraftLink').addEventListener('click', function(event) {
+      event.preventDefault();
+  
+      navigator.clipboard.writeText('mc.colossal.lol').then(() => {
+        alert('Copied server address: mc.colossal.lol');
+      }).catch(err => {
+        alert('Failed to copy the address: ' + err);
+      });
+    });
+  </script>
 </body>
 </html>
