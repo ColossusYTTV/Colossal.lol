@@ -1,766 +1,251 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta content="COLOSSAL | Fake it till you make it." property="og:title">
-  <meta content="Climb the ranks to #1 with the most advanced, unique and spicialized Gorilla Tag client." property="og:description">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colossal</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="css/background.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Colossal Cheat Menu V3">
+    <meta property="og:description" content="Coming soon.">
+    <meta property="og:image" content="https://colossal.lol/favicon.png">
+    <meta property="og:url" content="https://colossal.lol">
+    <meta property="og:type" content="website">
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-      scroll-snap-type: y mandatory;
-    }
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <title>Colossal Cheat Menu V3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* Animation */
-    @keyframes fadeInUpSlow 
-    {
-      0% { transform: translateY(20px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-    @keyframes scrollBackground 
-    {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-66.66%);
-      }
-    }
+        body {
+            font-family: 'Consolas', 'Courier New', monospace;
+            background: #000000;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
 
-    /* Hero Animations */
-    .hero h1, .hero h2, .hero p, .hero p2, .hero button {
-      opacity: 0;
-    }
-    /* Hero (top of the page) */
-    .hero {
-      text-align: center;
-      position: relative;
-      font-size: 2rem;
-      color: #fff;
-      text-shadow: 0 0 20px #cc00ff;
-      right: 450px;
-      top: 250px;
-    }
-    .hero .version {
-      font-size: 2.5rem;
-      color: #fff;
-      text-shadow: 0 0 20px #cc00ff;
-      position: absolute;
-      top: 0;
-      right: -3rem;
-    }
-    .hero h1 {
-      font-size: 8rem;
-      margin-bottom: 1rem;
-      text-shadow: 0 0 20px #cc00ff;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-    }
-    .hero h2 {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-      text-shadow: 0 0 20px #cc00ff;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.8s;
-    }
-    .hero p {
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
-      text-shadow: 0 0 20px #cc00ff;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.8s;
-    }
-    .hero p2 {
-      font-size: 2rem;
-      color: #fff;
-      text-shadow: 0 0 20px #cc00ff;
-      text-align: center;
-      position: relative;
-      top: -5px;
-      margin-bottom: 2rem;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.8s;
-    }
-    .hero button {
-      margin: 0 10px;
-      color: #ffffff;
-      box-shadow: 0 0 20px #cc00ff;
-      background-color: #cc00ff;
-      padding: 10px 40px;
-      border-radius: 25px;
-      border: none;
-      cursor: pointer;
-      font-size: 2rem;
-      opacity: 1;
-      transition: opacity 0.3s ease;
-    }
-    .hero a {
-      color: #cc00ff;
-    }
-    .hero button:hover {
-      opacity: 0.5;
-    }
-    .hero a:hover {
-      text-decoration: none;
-    }
+        .background-orbs {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
 
-    /* Hero 2 */
-    .hero2 h1 {
-      position: relative;
-      font-size: 4.5rem;
-      margin-bottom: 14rem;
-      text-shadow: 0 0 10px #ffffff;
-      left: 330px;
-      top: 400px;
-      opacity: 0;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-    }
-    .hero2 p {
-      position: relative;
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      text-shadow: 0 0 10px #ffffff;
-      left: 330px;
-      top: 180px;
-      opacity: 0;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-    }
-    .hero2-container {
-      position: relative;
-      text-align: center;
-    }
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.6;
+            animation: float 20s ease-in-out infinite;
+        }
 
-    /* Hero 3 */
-    .hero3 h1 {
-      font-size: 4.5rem;
-      margin-bottom: 10rem;
-      text-shadow: 0 0 10px #ffffff;
-      opacity: 0;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-      position: relative;
-      top: 50px;
-    }
-    .hero3 h2 {
-      font-size: 2.5rem;
-      margin-bottom: 14rem;
-      text-shadow: 0 0 10px #ffffff;
-      opacity: 0;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-      position: relative;
-    }
-    .hero3 p {
-      position: absolute;
-      top: 130%;
-      left: 25%;
-      transform: translate(-50%, -50%);
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      text-shadow: 0 0 10px #7A7580;
-      color: #7A7580;
-      opacity: 0;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-    }
-    .hero3_visual_container {
-      position: relative;
-      text-align: left;
-      padding: 20px;
-      width: 600px;
-      height: 300px;
-      margin: 20px auto;
-      border-radius: 10px;
-      right: 400px;
-      bottom: 50px;
-    }
-    .hero3_visual_container h1 {
-      font-size: 2.5rem;
-      margin-bottom: 14rem;
-      text-shadow: 0 0 10px #ffffff;
-      opacity: 0;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-    }
-    .hero3_visual_container p {
-      position: relative;
-      font-size: 1.10rem;
-      margin-bottom: 2rem;
-      text-shadow: 0 0 10px #7A7580;
-      color: #7A7580;
-      opacity: 0;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-      bottom: 180px;
-    }
-    .hero3_visual_container ul {
-      position: relative;
-      list-style-type: none;
-      font-size: 1.10rem;
-      padding-left: 0;
-      line-height: 1.625;
-      text-shadow: 0 0 10px #7A7580;
-      color: #7A7580;
-      opacity: 0;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-      bottom: 180px;
-    }
-    .hero3_visual_container ul li {
-      background: url("images/styled-ul-check.svg") no-repeat left center;
-      padding-left: 46px;
-      margin-bottom: 10px;
-    }
+        .orb1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, #e1b0ff 0%, transparent 70%);
+            top: -200px;
+            right: -100px;
+            animation-delay: 0s;
+        }
 
-    /* Hero 4 */
-    .hero4_visual_container {
-      position: relative;
-      text-align: left;
-      padding: 20px;
-      width: 600px;
-      height: 300px;
-      margin: 20px auto;
-      border-radius: 10px;
-      left: 400px;
-      bottom: 130px;
-    }
-    .hero4_visual_container h1 {
-      font-size: 2.5rem;
-      margin-bottom: 14rem;
-      text-shadow: 0 0 10px #ffffff;
-      opacity: 0;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-    }
-    .hero4_visual_container p {
-      position: relative;
-      font-size: 1.10rem;
-      margin-bottom: 2rem;
-      text-shadow: 0 0 10px #7A7580;
-      color: #7A7580;
-      opacity: 0;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-      bottom: 180px;
-    }
-    .hero4_visual_container ul {
-      position: relative;
-      list-style-type: none;
-      font-size: 1.10rem;
-      padding-left: 0;
-      margin-bottom: 13px;
-      line-height: 1.625;
-      text-shadow: 0 0 10px #7A7580;
-      color: #7A7580;
-      opacity: 0;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-      bottom: 180px;
-    }
-    .hero4_visual_container ul li {
-      background: url("images/styled-ul-check.svg") no-repeat left center;
-      padding-left: 46px;
-      margin-bottom: 10px;
-    }
+        .orb2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, #c77dff 0%, transparent 70%);
+            bottom: -150px;
+            left: -100px;
+            animation-delay: 5s;
+        }
 
-    /* Hero 5 */
-    .hero5_visual_container {
-      position: relative;
-      text-align: left;
-      padding: 20px;
-      width: 600px;
-      height: 300px;
-      margin: 20px auto;
-      border-radius: 10px;
-      right: 400px;
-      bottom: 50px;
-    }
-    .hero5_visual_container h1 {
-      font-size: 2.5rem;
-      margin-bottom: 14rem;
-      text-shadow: 0 0 10px #ffffff;
-      opacity: 0;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-    }
-    .hero5_visual_container p {
-      position: relative;
-      font-size: 1.10rem;
-      margin-bottom: 2rem;
-      text-shadow: 0 0 10px #7A7580;
-      color: #7A7580;
-      opacity: 0;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-      bottom: 180px;
-    }
-    .hero5_visual_container ul {
-      position: relative;
-      list-style-type: none;
-      font-size: 1.10rem;
-      padding-left: 0;
-      line-height: 1.625;
-      text-shadow: 0 0 10px #7A7580;
-      color: #7A7580;
-      opacity: 0;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-      bottom: 180px;
-    }
-    .hero5_visual_container ul li {
-      background: url("images/styled-ul-check.svg") no-repeat left center;
-      padding-left: 46px;
-      margin-bottom: 10px;
-    }
+        .orb3 {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, #e1b0ff 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: 10s;
+        }
 
-    /* Info box */
-    .info-box-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      position: relative;
-      bottom: 400px;
-      left: 500px;
-      width: 750px;
-    }
-    .info-box {
-      position: relative;
-      width: calc(50% - 20px);
-      padding: 20px;
-      background: rgba(43, 19, 56, 0.573);
-      border-radius: 10px;
-      opacity: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-    }
-    .info-box h2 {
-      font-size: 1.6rem;
-      margin-bottom: 10px;
-      text-align: center;
-      color: #fff;
-      text-shadow: 0 0 5px #fff;
-    }
-    .info-box h3 {
-      font-size: 0.8rem;
-      margin-bottom: 10px;
-      text-align: center;
-      color: #fff;
-      text-shadow: 0 0 5px #fff;
-    }
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(30px, -30px) scale(1.1);
+            }
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+        }
 
-    /* Closer Look Box */
-    .CloserLook-info-box-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      position: relative;
-      left: 140px;
-      width: 1500px;
-    }
-    .CloserLook-info-box {
-      position: relative;
-      height: 200px;
-      width: 400px;
-      padding: 20px;
-      background: rgba(43, 19, 56, 0.573);
-      border-radius: 10px;
-      opacity: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: left;
-      align-items: left;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-    }
-    .CloserLook-info-box h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      text-align: left;
-      color: #fff;
-      text-shadow: 0 0 5px #fff;
-    }
-    .CloserLook-info-box h3 {
-      font-size: 0.8rem;
-      margin-bottom: 30px;
-      text-align: left;
-      color: #7A7580;
-      text-shadow: 0 0 5px #7A7580;
-    }
-    .CloserLook-info-box button {
-      margin: 0px;
-      text-align: left;
-      text-shadow: 0 0 5px #cc00ff;
-      color: #cc00ff;
-      background-color: #ffffff00;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-      opacity: 1;
-      transition: opacity 0.3s ease;
-    }
+        .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 80px 60px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(40px) saturate(180%);
+            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            border-radius: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 0 80px rgba(225, 176, 255, 0.15);
+            max-width: 800px;
+            width: 90%;
+            animation: fadeIn 1s ease-out;
+        }
 
-    /* footer thing */
-    .footer-box-container {
-      display: flex;
-      flex-wrap: wrap;
-      position: relative;   
-    }
-    .footer-box {
-      position: relative;
-      width: 1200px;
-      height: 350px;
-      padding: 20px;
-      background: radial-gradient(circle at 70% 70%, #cc00ff8b 0%, rgba(43, 19, 56, 0.573) 80%);
-      border-radius: 30px;
-      opacity: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      animation: fadeInUpFast 1s ease-out forwards;
-      animation-delay: 0.2s;
-    }
-    .footer-box h2 {
-      font-weight: bolder;
-      font-size: 2.7rem;
-      margin-bottom: 20px;
-      margin-left: 40px;
-      text-align: left;
-      color: #fff;
-      text-shadow: 0 0 5px #fff;
-    }
-    .footer-box h3 {
-      font-weight: 300;
-      font-size: 1rem;
-      margin-left: 40px;
-      margin-bottom: 80px;
-      text-align: left;
-      color: #fff;
-      text-shadow: 0 0 5px #fff;
-    }
-    .footer-box button {
-      margin-left: 40px;
-      margin-bottom: 10px;
-      width: 180px;
-      height: 50px;
-      color: #ffffff;
-      box-shadow: 0 0 20px #cc00ff;
-      background-color: #cc00ff;
-      padding: 10px 40px;
-      border-radius: 15px;
-      border: none;
-      cursor: pointer;
-      font-size: 1.2rem;
-      opacity: 1;
-      transition: opacity 0.3s ease;
-    }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
 
-    /* Background images section */
-    #section2 {
-      position: relative;
-      overflow: hidden;
-      height: 100vh;
-    }
-    .background-images {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      overflow: hidden;
-    }
-    .image-slider {
-      display: flex;
-      width: 590%;
-      height: 100%;
-      animation: scrollBackground 50s linear infinite;
-    }
-    .image-slider img {
-      width: 33.33%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.2;
-    }
-    .background-images .image-slider {
-      animation: scrollBackground 50s linear infinite;
-    }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
 
-    /* Pictures for the monkeys and display */
-    .mios {
-      position: relative;
-      left: 280px;
-      bottom: 130px;
-      animation: fadeInUpSlow 1.5s ease-out forwards;
-      animation-delay: 0.2s;
-      opacity: 0;
-    }
-    .starry {
-      position: relative;
-      right: 360px;
-      bottom: 15px;
-      animation: fadeInUpSlow 1.5s ease-out forwards;
-      animation-delay: 0.2s;
-      opacity: 0;
-    }
-    .will {
-      position: relative;
-      bottom: 590px;
-      left: 560px;
-      animation: fadeInUpSlow 1.5s ease-out forwards;
-      animation-delay: 0.2s;
-      opacity: 0;
-    }
-    .menu {
-      position: relative;
-      bottom: 540px;
-      right: 900px;
-      animation: fadeInUpSlow 1.5s ease-out forwards;
-      animation-delay: 0.2s;
-      opacity: 0;
-    }
-    .colossus {
-      position: relative;
-      bottom: 380px;
-      left: 400px;
-      animation: fadeInUpSlow 1.5s ease-out forwards;
-      animation-delay: 0.2s;
-      opacity: 0;
-    }
-  </style>
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ffffff 0%, #e1b0ff 50%, #c77dff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+            
+            .container {
+                padding: 60px 30px;
+                max-width: 90%;
+            }
+        }
+
+        .version {
+            font-size: 18px;
+            color: rgba(225, 176, 255, 0.8);
+            margin-top: -10px;
+            letter-spacing: 3px;
+        }
+
+        .coming-soon {
+            font-size: 22px;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 30px 0;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .discord-button {
+            display: inline-block;
+            padding: 18px 56px;
+            background: rgba(225, 176, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1.5px solid rgba(225, 176, 255, 0.4);
+            border-radius: 16px;
+            color: #e1b0ff;
+            font-size: 16px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            text-decoration: none;
+            letter-spacing: 2px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 
+                0 8px 32px rgba(225, 176, 255, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .discord-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .discord-button:hover::before {
+            left: 100%;
+        }
+
+        .discord-button:hover {
+            background: rgba(225, 176, 255, 0.2);
+            border-color: rgba(225, 176, 255, 0.6);
+            transform: translateY(-3px);
+            box-shadow: 
+                0 12px 48px rgba(225, 176, 255, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .discord-button:active {
+            transform: translateY(-1px);
+        }
+
+        .shine {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            border-radius: 32px 32px 0 0;
+        }
+    </style>
 </head>
 <body>
-  <div class="transparent-bar">
-    <div class="left-links">
-      <a href="index.html" class="colossal-link">Colossal</a>
-      <a href="#" id="minecraftLink" class="colossal-link" title="Click to copy our Minecraft server IP (mc.colossal.lol)">Minecraft</a>
-      <p class="left-links" title="🟢 = Fully undetected 🟡 = One or a couple possible detected features 🔴 = DO NOT USE (will get you banned) 🚫 = Menu broken (fix is being worked on) 🛠️ = Down time (update being worked on) Pending = Menu has updated but not fully tested " onclick="showPopup()" style="cursor: pointer; color: #cc00ff; font-weight: bold;">Menu Status: 🟢</p>
+    <div class="background-orbs">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="orb orb3"></div>
     </div>
-
-    <div class="message">Menu permanently down, discord @ccmv2backup for source code purchase offers</div>
-    <div class="right-buttons">
-      <a href="tos.html" class="discord-link">TOS</a>
-      <a href="d.html" target="_blank" class="discord-link">Discord</a>
-      <a href="shop.html" class="download-button">Shop</a> 
+    
+    <div class="container">
+        <div class="shine"></div>
+        <div class="glass-card">
+            <h1>Colossal Cheat Menu</h1>
+            <p class="version">V3</p>
+        </div>
+        
+        <p class="coming-soon">Coming Soon</p>
+        
+        <a href="#" class="discord-button">Join the Discord</a>
     </div>
-  </div>
-
-  <main class="wrapper">
-    <section id="section1">
-      <div class="hero">
-        <h1>Colossal<span class="version">V2</span></h1>
-        <button onclick="window.location.href='shop.html'">Buy Now</button>
-        <p2><a href="features.html">Features</a></p2>
-      </div>
-      <div class="mios">
-        <img src="images/mioskillinghimself.png" alt="picture of a monkey" width="880" height="500"/>
-      </div>
-    </section>
-  
-    <section id="section2">
-    <!--
-      <div class="background-images">
-          <div class="image-slider">
-              <img src="images/thumbnail1.jpg" alt="Image 1">
-              <img src="images/thumbnail2.jpg" alt="Image 2">
-              <img src="images/thumbnail6.jpg" alt="Image 6">
-              <img src="images/thumbnail4.jpg" alt="Image 4">
-              <img src="images/thumbnail5.jpg" alt="Image 5">
-              <img src="images/thumbnail3.jpg" alt="Image 3">
-          </div>
-      </div>
-    -->
-  
-      <div class="hero2">
-        <div class="hero2-container">
-          <h1>Fake it till you make it.</h1>
-          <p>The perfect mix of OP, Ghost and QOL</p>
-  
-          <div class="starry">
-            <img src="images/starrybeingafurry.png" height="600" width="1080"/>
-          </div>
-  
-          <div class="info-box-container">
-            <div class="info-box">
-                <h2>Optimization</h2>
-                <h3>This menu isnt made by literal children. No frame drops, no bullshit.</h3>
-            </div>
-            <div class="info-box">
-                <h2>Dependable Features</h2>
-                <h3>No updates required. Our modules are designed to last, built to work without relying on temporary bypasses.</h3>
-            </div>
-            <div class="info-box">
-                <h2>Ghost Mode</h2>
-                <h3>The best competitive cheat; fully customizable to your liking and ability, used by your favorite pros.</h3>
-            </div>
-            <div class="info-box">
-                <h2>Over Powered</h2>
-                <h3>Bend everything to your will with the most game breaking, undetected features.</h3>
-            </div>
-          </div>   
-        </div>
-      </div>
-    </section>
-  
-  
-    <section id="section3">
-      <div class="hero3">
-        <h1>
-          Exclusive Features
-          <p>Unique to the CCMV2 experience.</p>
-        </h1>
-      </div>
-  
-      <div class="hero3_visual_container">
-        <h1>Configuration</h1>
-        <p>Browse trusted configs made by the community to match your playstyle</p>
-        <ul>
-          <li>Find the best configs based on reviews.</li>
-          <li>Upload your own configs to the community.</li>
-          <li>Privately share a config with close friends.</li>
-        </ul>
-  
-        <div class="will">
-          <img src="images/64will64.png" height="500" width="880"/>
-        </div>
-      </div>
-    </section>
-  
-  
-    <section id="section4">
-      <div class="hero4_visual_container">
-        <h1>VR Graphical User Interface</h1>
-        <p>Its time to move away from traditional mod menus</p>
-        <ul>
-          <li>Customize colours to match your style.</li>
-          <li>Fully controlled by controller inputs, perfect for conspicuous gameplay.</li>
-          <li>View essential stats like FPS, ping, playtime and room info in an overlay.</li>
-        </ul>
-  
-        <div class="menu">
-          <img src="images/menu.png" height="560" width="980"/>
-        </div>
-      </div>
-    </section>
-
-    <section id="section5">
-      <div class="hero3">
-        <h1>
-          Take A Closer Look
-          <p>A few more things we have to offer</p>
-        </h1>
-      </div>
-
-      <div class="CloserLook-info-box-container">
-        <div class="CloserLook-info-box">
-            <h2>Anti Screen Share</h2>
-            <h3>Never get caught cheating again, avoid screen share checks. Or record your "legit" gameplay!</h3>
-            <button onclick="window.location.href='features.html'">Learn More</button>
-        </div>
-        <div class="CloserLook-info-box">
-            <h2>Music Player</h2>
-            <h3>No sound board? No problem. Play songs to yourself or share them with the room.</h3>
-            <button onclick="window.location.href='features.html'">Learn More</button>
-        </div>
-        <div class="CloserLook-info-box">
-            <h2>The Sight</h2>
-            <h3>See CCMV2 users, identified by their pink nameplate and [CCM] prefix.</h3>
-            <button onclick="window.location.href='features.html'">Learn More</button>
-        </div>
-        <div class="CloserLook-info-box">
-            <h2>Trusted provider</h2>
-            <h3>We’ve been your leading and most trusted menu provider since 2021.</h3>
-            <button onclick="window.location.href='features.html'">Learn More</button>
-        </div>
-        <div class="CloserLook-info-box">
-          <h2>Active support</h2>
-          <h3>What ever the issue may be, we’re here to help you solve it.</h3>
-          <button onclick="window.location.href='features.html'">Learn More</button>
-        </div>
-        <div class="CloserLook-info-box">
-          <h2>Reliability</h2>
-          <h3>Our client is reliable, delivering smooth, consistent performance so you can play confidently.</h3>
-          <button onclick="window.location.href='features.html'">Learn More</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="section6">
-      <div class="footer-box-container">
-        <div class="footer-box">
-            <h2>Fake it till you make it.</h2>
-            <h3>Get an unfair advantage over your opponents, while<br/>remaining completely undetected</h3>
-            <button onclick="window.location.href='shop.html'">
-              Get Started
-              <span>
-                <div class="colossus">
-                  <img src="images/Colossus.png" alt="picture of a monkey" width="880" height="500"/>
-                </div>
-              </span>
-            </button>
-        </div>
-      </div> 
-
-      <footer>
-        <div class='air air1'></div>
-        <div class='air air2'></div>
-        <div class='air air3'></div>
-        <div class='air air4'></div>
-      </footer>
-    </section>
-  </main>
-
-  <!-- Background -->
-  <div class="backcircles">
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
-
-  <div class="circles-navigation">
-    <div class="circle" data-target="#section1"></div>
-    <div class="circle" data-target="#section2"></div>
-    <div class="circle" data-target="#section3"></div>
-    <div class="circle" data-target="#section4"></div>
-    <div class="circle" data-target="#section5"></div>
-    <div class="circle" data-target="#section6"></div>
-  </div>
-
-  <script src="scripts.js" defer></script>
-  <script src="js/audiovisualizer.js"></script>
-  <script src="js/scrolling.js"></script>
-
-  <script>
-    document.getElementById('minecraftLink').addEventListener('click', function(event) {
-      event.preventDefault();
-  
-      navigator.clipboard.writeText('mc.colossal.lol').then(() => {
-        alert('Copied server address: mc.colossal.lol');
-      }).catch(err => {
-        alert('Failed to copy the address: ' + err);
-      });
-    });
-  </script>
 </body>
 </html>
